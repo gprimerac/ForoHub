@@ -41,7 +41,7 @@ Lombok (Productividad)
 
 instalacion
 
-1 clonar https://github.com/ga/ForoHub.git
+1 clonar https://github.com/gprimerac/ForoHub.git
 
 2 base de datos: Configurar la Base de Datos: Crea una base de datos en MySQL llamada forohub_dby configura tus credenciales en el archivo src/main/resources/application.properties:
 
