@@ -41,11 +41,14 @@ Lombok (Productividad)
 
 instalacion
 
-1 clonar https://github.com/SaraithSanchez/ForoHub.git
+1 clonar https://github.com/ga/ForoHub.git
 
 2 base de datos: Configurar la Base de Datos: Crea una base de datos en MySQL llamada forohub_dby configura tus credenciales en el archivo src/main/resources/application.properties:
 
-spring.datasource.url=jdbc:mysql://localhost:3306/forohub_db spring.datasource.username=root spring.datasource.password= api.security.secret=${JWT_SECRET:mi_clave_secreta_123}
+spring.datasource.url=jdbc:mysql://localhost:3306/forohub_db
+spring.datasource.username=root
+spring.datasource.password=
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
 Ejecutar la aplicación: puede usar el comando ./mvnw spring-boot:runo ejecutarla directamente desde IntelliJ IDEA.
 
