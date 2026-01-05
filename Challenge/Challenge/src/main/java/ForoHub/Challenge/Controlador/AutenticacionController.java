@@ -27,13 +27,11 @@ public class AutenticacionController {
 
     @PostMapping
     public ResponseEntity autenticarUsuario(@RequestBody @Valid DatosAutenticacionUsuario datos) {
-        // 1. Creamos el token de autenticación con los datos del login
-        Authentication authToken = new UsernamePasswordAuthenticationToken(datos.login(), datos.clave());
+             Authentication authToken = new UsernamePasswordAuthenticationToken(datos.login(), datos.clave());
 
-        // 2. El authenticationManager valida si el usuario existe y la clave es correcta
-        var usuarioAutenticado = authenticationManager.authenticate(authToken);
+             var usuarioAutenticado = authenticationManager.authenticate(authToken);
 
-        // 3. Si la validación es exitosa, generamos el Token JWT real
+
         var JWTtoken = tokenService.generarToken((Usuario) usuarioAutenticado.getPrincipal());
 
         // 4. Devolvemos el token envuelto en el DTO que creaste
