@@ -34,7 +34,8 @@ public class AutenticacionController {
 
         var JWTtoken = tokenService.generarToken((Usuario) usuarioAutenticado.getPrincipal());
 
-        // 4. Devolvemos el token envuelto en el DTO que creaste
+        
         return ResponseEntity.ok(new DatosJWTToken(JWTtoken));
     }
 }
+
